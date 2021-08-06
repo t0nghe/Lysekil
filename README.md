@@ -91,4 +91,4 @@ Changing the structure of the pages is a bit more cumbersome. You can start by r
 
 ## Demo
 
-My own blog at [tonghe.xyz](https://tonghe.xyz/) is a demo for this blog generator. 
+My own blog at [tonghe.xyz](https://tonghe.xyz/) is a demo for this blog generator. The default logo is a picture I took in Lysekil, Västra Götaland, Sweden. 
