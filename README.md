@@ -36,7 +36,7 @@ Paragraph 3 of your blog post.
 
 **Fields in the header**
 
-* `title` is the title of this blog post. It will be shown in either <h3> or <h1> on the webpage. 
+* `title` is the title of this blog post. It will be shown in either `<h3>` or `<h1>` on the webpage. 
 * `tags` are the tags of this blog post. You may choose not to tag your post. Multiple tags are separated by a comma.
 * `slug` is part of the URL by which this blog post is visited from the web.
   * When published, the URL of this post will be: `<yourblog.com>/2021/q1/sample_post`
