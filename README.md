@@ -89,6 +89,7 @@ Changing the structure of the pages is a bit more cumbersome. You can start by r
 
 1. Pagination error: When the number of blog posts to be shown is divisible by `POSTS_PER_PAGE`, one more “next page” link will be created.  
 
-## Demo
+## Demo and More
 
-My own blog at [tonghe.xyz](https://tonghe.xyz/) is a demo for this blog generator. The default logo is a picture I took in Lysekil, Västra Götaland, Sweden. 
+* My own blog at [tonghe.xyz](https://tonghe.xyz/) is a demo for this blog generator.
+* The default logo is a picture I took in Lysekil, Västra Götaland, Sweden. 
