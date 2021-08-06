@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&display=swap');
+
+$footer-bg-black: rgb(51,53,56);
+$footer-bg-lighter: rgb(61,63,66);
+$footer-text-white: rgb(187, 187, 187);
+$bear-bg-color: rgb(251, 251, 251);
+$main-text-color: rgb(50, 50, 50);
+$tag_bg_color: rgb(167, 176, 179);
+$high-light-bg-color: rgb(211, 255, 164);
+$accent-red: rgb(221, 76, 79);
+$accent-grey: rgb(153, 153, 153);
+$link-text-color: rgb(224, 93, 96);
+$blog-name-font: 'Fira Sans', Avenir, Helvetica, Arial, sans-serif;
+$code-block-border: rgb(197, 197, 197)
+
+:root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+hr {
+    width: 60%;
+    border: 0px;
+    border-top: 1px solid $code-block-border;
+}
+
+article {
+    padding-top: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#scrollingInteraction {
+    top: 0px;
+    transition: 0.5s;
+}
+
+.headerSpecificPage {
+    position: fixed;
+    width: 800px;
+    top: 0px;
+    margin-top: -5px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "image title"
+    "image navigation";
+    color: $accent-red;
+    background-color: $bear-bg-color;
+    z-index: 10;
+    transition: .5s;
+ 
+    #headerAvatar {
+        grid-area: image;
+        img {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+        }
+    }
+
+    #headerBlogName {
+        grid-area: title; 
+        font-family: $blog-name-font;
+        font-size: 110%;
+        text-align: right;
+        color: $accent-red;
+        font-weight: 700;
+
+        a {
+            text-decoration: none;
+            color: $accent-red;
+        }
+    }
+
+    #headerNav {
+        text-align: right;
+        grid-area: navigation;
+        color: $accent-red;
+        
+        a {
+            text-decoration: none;
+            color: $accent-red;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            text-decoration-color: $accent-red;
+            text-decoration-thickness: 2px;
+        }
+    }
+}
+
+
+
+.headerIndexPage {
+    // position: -webkit-sticky;
+    position: fixed;
+    width: 800px;
+    top: 0px;
+    margin-top: -5px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    // lines above this are added to test if scrolling will be fixed
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr 1fr;
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "image" "title" "navigation";
+    color: $accent-red;
+    text-align: center;
+    background-color: $bear-bg-color;
+    z-index: 10;
+    transition: .5s;
+    
+    #headerAvatar {
+        grid-area: image;
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+    }
+
+    #headerBlogName {
+        grid-area: title; 
+        font-family: $blog-name-font;
+        font-size: 130%;
+        color: $accent-red;
+        font-weight: 700;
+        a {
+            text-decoration: none;
+            color: $accent-red;
+        }
+    }
+
+    #headerNav {
+        grid-area: navigation;
+        color: $accent-red;
+        
+        a {
+            text-decoration: none;
+            color: $accent-red;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            text-decoration-color: $accent-red;
+            text-decoration-thickness: 2px;
+        }
+    }
+}
+
+a {
+    color: $accent-red;
+}
+
+body {
+    margin: 10px;
+    width: 800px;
+    background-color: $bear-bg-color;
+    color: $main-text-color;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+h3 {
+
+    a {
+        color: $main-text-color;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        text-decoration-color: $accent-red;
+        text-decoration-thickness: 2px;
+    }
+}
+
+.articleDateLine {
+
+    font-size: 12px;
+
+    span {
+        // margin-left: 6px;
+        margin-right: 10px;
+    }
+
+    .articleDate {
+        font-style: italic;
+    }
+    a { 
+        background-color: $tag_bg_color;
+        border-radius: 12px;
+        padding: 2px 10px 2px 10px;
+        margin: 5px 1px 5px 1px;
+        text-decoration: none;
+        color: $bear-bg-color;
+    }
+    
+}
+
+div#footer {
+    padding: 5px;
+    display: flex;
+    background-color: $footer-bg-black;
+    color: $footer-text-white;
+    border-radius: 5px;
+
+    .footerBlock {
+        padding: 5px;
+        font-size: 80%;
+        border-radius: 5px;
+        max-width: 190px;
+    }
+
+    .footerBlock:link {
+        background-color: $footer-bg-black;
+    }
+
+    .footerBlock:hover {
+        background-color: $footer-bg-lighter;
+    }
+
+    .footerTitleLink {
+        font-weight: bold;
+    }
+}
+
+#pagination {
+    text-align: center;
+    margin: 12px;
+    
+    a {
+        text-decoration: none;
+        color: $accent-red;
+        margin: 0px 5px 0px 5px;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        text-decoration-color: $accent-red;
+        text-decoration-thickness: 2px;
+    }
+
+    a.newer::before{
+        content: "❮ "
+    }
+
+    a.older::after{
+        content: " ❯"
+    }
+}
+
+
+    .codehilite {
+        border: 1px solid $code-block-border;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 10px;
+        margin: 5px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        background-color: white;
+        border-radius: 3px;
+        /* Following style is borrowed from the Autumn style available from Pygments.  */
+        .hll { background-color: #ffffcc }
+.c { color: #aaaaaa; font-style: italic }
+.err { background-color: white }
+.k { color: #0000aa }
+.ch { color: #aaaaaa; font-style: italic }
+.cm { color: #aaaaaa; font-style: italic } 
+.cp { color: #4c8317 } 
+.cpf { color: #aaaaaa; font-style: italic } 
+.c1 { color: #aaaaaa; font-style: italic } 
+.cs { color: #0000aa; font-style: italic } 
+.gd { color: #aa0000 } 
+.ge { font-style: italic } 
+.gr { color: #aa0000 } 
+.gh { color: #000080; font-weight: bold } 
+.gi { color: #00aa00 } 
+.go { color: #888888 } 
+.gp { color: #555555 } 
+.gs { font-weight: bold } 
+.gu { color: #800080; font-weight: bold } 
+.gt { color: #aa0000 } 
+.kc { color: #0000aa } 
+.kd { color: #0000aa } 
+.kn { color: #0000aa } 
+.kp { color: #0000aa } 
+.kr { color: #0000aa } 
+.kt { color: #00aaaa } 
+.m { color: #009999 } 
+.s { color: #aa5500 } 
+.na { color: #1e90ff } 
+.nb { color: #00aaaa } 
+.nc { color: #00aa00; text-decoration: underline } 
+.no { color: #aa0000 } 
+.nd { color: #888888 } 
+.ni { color: #880000; font-weight: bold } 
+.nf { color: #00aa00 } 
+.nn { color: #00aaaa; text-decoration: underline } 
+.nt { color: #1e90ff; font-weight: bold } 
+.nv { color: #aa0000 } 
+.ow { color: #0000aa } 
+.w { color: #bbbbbb } 
+.mb { color: #009999 } 
+.mf { color: #009999 } 
+.mh { color: #009999 } 
+.mi { color: #009999 } 
+.mo { color: #009999 } 
+.sa { color: #aa5500 } 
+.sb { color: #aa5500 } 
+.sc { color: #aa5500 } 
+.dl { color: #aa5500 } 
+.sd { color: #aa5500 } 
+.s2 { color: #aa5500 } 
+.se { color: #aa5500 } 
+.sh { color: #aa5500 } 
+.si { color: #aa5500 } 
+.sx { color: #aa5500 } 
+.sr { color: #009999 } 
+.s1 { color: #aa5500 } 
+.ss { color: #0000aa } 
+.bp { color: #00aaaa } 
+.fm { color: #00aa00 } 
+.vc { color: #aa0000 } 
+.vg { color: #aa0000 } 
+.vi { color: #aa0000 } 
+.vm { color: #aa0000 } 
+.il { color: #009999 } 
+}
