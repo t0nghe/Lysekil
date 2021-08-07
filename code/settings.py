@@ -30,8 +30,8 @@ ADDITIONAL_NAV_LINKS = [
 # Why don't we randomly sprinkle three from the list to the footer?
 FOOTER_LINKS = [
     {
-        "name": "Check Out My Friend's Blog",
-        "href": "http://mycoolfriend.blog/",
-        "desc": "There's a lot of cool stuff on their site!"
+        "name": "Lysekil: A Static Blog Generator",
+        "href": "https://github.com/t0nghe/Lysekil",
+        "desc": "This is a static-file blog generator written in Python."
     }
 ]
