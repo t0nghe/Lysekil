@@ -7,7 +7,7 @@ This is a static-file blog generator written in Python.
 * This app converts Markdown files in `_source` directory to static HTML files under `_target` directory.
 
 * This app generates blog posts in HTML files. Blog posts are called “notes” in this app. The word “blog”, itself short for “web log”, does not sound like something that ages well. Calling them “notes” suggests a wish that your writing will be less time-sensitive. Hopefully your notes are reflected upon from time to time.
-  * Notes are organized under the `archive` menu by quarters. It is an arbitrary decision to group blog posts by quarters rather than months.
+  * Notes are organized under the `archive` menu by quarters. It is an arbitrary decision to group notes by quarters rather than months.
   * Notes are also categorized by tags. Each note can have one or more tags.
   * Your notes will be accessible at: `domainname/<year>/<quarter>/<slug>`, eg: `https://this.xyz/2021/q3/hello-world`. 
 * It generates pages too. 
@@ -121,6 +121,7 @@ Changing the structure of the pages is a bit more cumbersome. You can start by r
 3. To Do: Internal linking. Since there is no one-to-one mapping between filenames of your Markdown files and URLs on the web, it might be a minor head-scratcher. I'll do it later.
 4. Issue: Somehow you can't use underscores (`_`) in slugs. I'll fix it later.
 5. To Do: I might also want to add support for external commenting services.
+6. To Do: Edit the default template to make it responsive. 
 
 ## Footnote
 
