@@ -125,4 +125,4 @@ Changing the structure of the pages is a bit more cumbersome. You can start by r
 ## Footnote
 
 * The default logo is a picture I took in Lysekil, Västra Götaland, Sweden.
-* This is an ongoing (namely unfinished) personal project. Don't rely on it for any serious business.
+* This is an ongoing (aka unfinished) personal project. Don't rely on it for any serious business.
