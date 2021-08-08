@@ -54,7 +54,7 @@ def gen_specific_page_container(body: str, date, tags: list, title: str):
     for tag in tags:
         tag_links += f'<a href="/tags/{tag}/">{tag}</a>'
 
-    html = f"""<div id="container"><article><h1>{title}</h1><div class="articleDateLine"><span class="articleDate">{pub_date}</span><span class="articleDatelineTags">{tag_links}</span></div><div id="body">{body}</div></article></div>"""
+    html = f"""<div id="container"><article><h1>{title}</h1><div class="articleDateLine"><span class="articleDate">{pub_date}</span><span class="articleDatelineTags">{tag_links}</span></div><div id="body">{body}</div></article><div id="dingbat">❖</div></div>"""
 
     return html
 

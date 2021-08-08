@@ -61,7 +61,7 @@ article {
         img {
             max-width: 48px;
             max-height: 48px;
-            border-radius: 10px;
+            border-radius: 20%;
         }
     }
 
@@ -97,7 +97,10 @@ article {
     }
 }
 
-
+#dingbat {
+    margin: 10px;
+    text-align: center;
+}
 
 .headerIndexPage {
     // position: -webkit-sticky;
@@ -125,7 +128,8 @@ article {
         img {
             max-width: 200px;
             max-height: 200px;
-            border-radius: 50%;
+            // border-radius: 50%;
+            border-radius: 30%;
             margin: 10px;
         }
     }
@@ -212,25 +216,23 @@ h3 {
 }
 
 div#footer {
-    padding: 5px;
-    background-color: $footer-bg-black;
-    color: $footer-text-white;
-    border-radius: 5px;
 
     #blogrollTicker {
         padding-left: 5px;
         padding-top: 5px;
         font-size: 70%;
-        color: $tag_bg_color;
         font-style: italic;
     }
 }
 
 div#footerEntries {
+    color: $footer-text-white;
     display: flex;
     flex-flow: row wrap;
-    // align-items: center;
     justify-content: center;
+    background-color: $footer-bg-black;
+    border-radius: 5px;
+    padding: 5px;
 
     .footerBlock {
         padding: 5px;

@@ -41,7 +41,7 @@ article {
     .headerSpecificPage #headerAvatar img {
       max-width: 48px;
       max-height: 48px;
-      border-radius: 10px; }
+      border-radius: 20%; }
   .headerSpecificPage #headerBlogName {
     grid-area: title;
     font-family: "Fira Sans", Avenir, Helvetica, Arial, sans-serif;
@@ -63,6 +63,10 @@ article {
       text-decoration: underline;
       text-decoration-color: #dd4c4f;
       text-decoration-thickness: 2px; }
+
+#dingbat {
+  margin: 10px;
+  text-align: center; }
 
 .headerIndexPage {
   position: fixed;
@@ -86,7 +90,7 @@ article {
     .headerIndexPage #headerAvatar img {
       max-width: 200px;
       max-height: 200px;
-      border-radius: 50%;
+      border-radius: 30%;
       margin: 10px; }
   .headerIndexPage #headerBlogName {
     grid-area: title;
@@ -143,22 +147,20 @@ h3 a:hover {
     text-decoration: none;
     color: #fbfbfb; }
 
-div#footer {
-  padding: 5px;
-  background-color: #333538;
-  color: #bbbbbb;
-  border-radius: 5px; }
-  div#footer #blogrollTicker {
-    padding-left: 5px;
-    padding-top: 5px;
-    font-size: 70%;
-    color: #a7b0b3;
-    font-style: italic; }
+div#footer #blogrollTicker {
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: 70%;
+  font-style: italic; }
 
 div#footerEntries {
+  color: #bbbbbb;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center; }
+  justify-content: center;
+  background-color: #333538;
+  border-radius: 5px;
+  padding: 5px; }
   div#footerEntries .footerBlock {
     padding: 5px;
     font-size: 80%;
