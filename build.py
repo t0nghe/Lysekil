@@ -53,7 +53,7 @@ if __name__ == "__main__":
         tag_listings.append(TagList(tag, tags_collection[tag]))
     
     for year_quarter in quarter_collection:
-        print('build line 51', year_quarter)
+        # print('build line 51', year_quarter)
         quarter_listings.append(
             QuarterList(year_quarter, 
             quarter_collection[year_quarter])

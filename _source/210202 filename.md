@@ -1,9 +1,13 @@
-title: Sample Post One
-tags: tag1, tag3
-slug: post_one
-summary: This is a sample post that shows how markdown is converted to HTML and how the generated site looks like.
+title: Sample Post With Long Summary
+tags: tag1, tag2
+slug: sample_post2
+summary: >
+  This sample post shows you how to use multiple tags.
+  And how to write longer summaries and footnotes.
 
-How are you my friend? I'd like to show you some JavaScript.
+How are you my friend? I'd like to show you some JavaScript[^1].
+
+[^1]: Can you believe the invention of JavaScript has nothing to do with the written language of Java the island?
 
 ```javascript
 var name = {hello: 'world'};

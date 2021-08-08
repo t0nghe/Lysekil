@@ -1,6 +1,7 @@
 <!DOCTYPE html><html>
     <head><title>NAME OF YOUR BLOG</title><link rel="stylesheet" href="/assets/template.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="alternate" type="application/atom+xml" href="/atom.xml" />
     <link rel="icon" type="image/png" href="/assets/favicon.ico" />
     <script type="text/javascript" src="/assets/script.js"></script>
@@ -10,17 +11,32 @@
     
     <div id="listing">
         <article>
-                <h3><a href="/2021/q1/post/">Sample Post</a></h3>
+                <h3><a href="/2021/q1/sample_post2/">Sample Post With Long Summary</a></h3>
+                <div class="articleDateLine">
+                    <span class="articleDate">2021-02-02</span>
+                    <span class="articleDatelineTags"><a href="/tags/tag1/">tag1</a><a href="/tags/tag2/">tag2</a></span>
+                </div>
+                <div><p>This sample post shows you how to use multiple tags.
+  And how to write longer summaries and footnotes. ⋯</p></div>
+            </article>
+        
+        <article>
+                <h3><a href="/2021/q1/post_one/">Sample Post One</a></h3>
                 <div class="articleDateLine">
                     <span class="articleDate">2021-01-01</span>
-                    <span class="articleDatelineTags"><a href="/tags/sample/">sample</a></span>
+                    <span class="articleDatelineTags"><a href="/tags/tag1/">tag1</a><a href="/tags/tag3/">tag3</a></span>
                 </div>
-                <div><p>This is a sample post that shows how markdown is converted to HTML and how the generated site looks like.</p></div>
+                <div><p>This is a sample post that shows how markdown is converted to HTML and how the generated site looks like. ⋯</p></div>
             </article>
         </div>
     
-    <div id="footer"><div class="footerBlock">
-        <div class="footerTitleLink"><a href="http://mycoolfriend.blog/">Check Out My Friend's Blog</a></div>
-        <p>There's a lot of cool stuff on their site!</p>
+    <div id="footer">
+    <div id="blogrollTicker">Friendly links:</div>
+    <div id="footerEntries">
+    <div class="footerBlock">
+        <div class="footerTitleLink"><a href="https://github.com/t0nghe/Lysekil">Lysekil: A Static Blog Generator</a></div>
+        <p>This is a static-file blog generator written in Python.</p>
         </div>
-        </div></body></html>
+        </div>
+    </div></body></html>
+    

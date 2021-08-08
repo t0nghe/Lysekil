@@ -6,24 +6,14 @@ import markdown2 as md
 from feedgen.feed import FeedGenerator
 
 def parse_frontmatter(frontmatter):
-    lines = frontmatter.split('\n')
-    parsed = dict()
-    for line in lines:
-        if not line:
-            break
-        key, value = line.split("=")
-        if key == 'tags':
-            parsed[key] = [i.strip() for i in value.split(',')]
-        elif key == 'summary':
-            parsed[key] = f"<p>{value}</p>"
-        elif key == 'page':
-            if value == 'True':
-                parsed[key] = True
-            else:
-                parsed[key] = False
-        else:
-            parsed[key] = value.strip()
-    if 'page' not in parsed.keys():
+    parsed = frontmatter
+    if 'tags' in parsed.keys():
+        parsed['tags'] = [k.strip() for k in parsed['tags'].split(',')]
+    if 'summary' in parsed.keys():
+        parsed['summary'] = f"<p>{parsed['summary']} ⋯</p>"
+    if 'page' in parsed.keys() and parsed['page'] == 'True':
+        parsed['page'] = True
+    else:
         parsed['page'] = False
 
     return parsed
@@ -41,13 +31,17 @@ def gen_year_quarter(date):
     year = date.year
     return (year, quarter)
 
+# [ 'body', 'date', 'ext_url', 'filename', 'page', 'slug', 'summary', 'tags', 'title', 'year_quarter' ]
 def parse_entry(full_path_name, filename):
 
     with open(full_path_name) as fin:
-        frontmatter, body = fin.read().split('///')
-        entry = parse_frontmatter(frontmatter)
+        body = md.markdown(fin.read(), extras=["metadata", "footnotes", "fenced-code-blocks"])
+        # print(body)
+        
+        entry = parse_frontmatter(body.metadata)
+        
         entry['filename'] = filename
-        body = md.markdown(body, extras=["footnotes", "fenced-code-blocks"])
+        
         entry['body'] = body
         created = datetime.strptime(filename.split()[0], '%y%m%d')
         entry['date'] = created.date()

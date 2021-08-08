@@ -22,7 +22,7 @@ article {
 
 .headerSpecificPage {
   position: fixed;
-  width: 800px;
+  width: 80vw;
   top: 0px;
   margin-top: -5px;
   padding-top: 10px;
@@ -39,9 +39,9 @@ article {
   .headerSpecificPage #headerAvatar {
     grid-area: image; }
     .headerSpecificPage #headerAvatar img {
-      width: 48px;
-      height: 48px;
-      border-radius: 10px; }
+      max-width: 48px;
+      max-height: 48px;
+      border-radius: 20%; }
   .headerSpecificPage #headerBlogName {
     grid-area: title;
     font-family: "Fira Sans", Avenir, Helvetica, Arial, sans-serif;
@@ -64,9 +64,13 @@ article {
       text-decoration-color: #dd4c4f;
       text-decoration-thickness: 2px; }
 
+#dingbat {
+  margin: 10px;
+  text-align: center; }
+
 .headerIndexPage {
   position: fixed;
-  width: 800px;
+  width: 80vw;
   top: 0px;
   margin-top: -5px;
   padding-top: 10px;
@@ -84,9 +88,9 @@ article {
   .headerIndexPage #headerAvatar {
     grid-area: image; }
     .headerIndexPage #headerAvatar img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
+      max-width: 200px;
+      max-height: 200px;
+      border-radius: 30%;
       margin: 10px; }
   .headerIndexPage #headerBlogName {
     grid-area: title;
@@ -113,7 +117,7 @@ a {
 
 body {
   margin: 10px;
-  width: 800px;
+  width: 80vw;
   background-color: #fbfbfb;
   color: #323232; }
 
@@ -143,22 +147,30 @@ h3 a:hover {
     text-decoration: none;
     color: #fbfbfb; }
 
-div#footer {
-  padding: 5px;
-  display: flex;
-  background-color: #333538;
+div#footer #blogrollTicker {
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: 70%;
+  font-style: italic; }
+
+div#footerEntries {
   color: #bbbbbb;
-  border-radius: 5px; }
-  div#footer .footerBlock {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: #333538;
+  border-radius: 5px;
+  padding: 5px; }
+  div#footerEntries .footerBlock {
     padding: 5px;
     font-size: 80%;
     border-radius: 5px;
-    max-width: 190px; }
-  div#footer .footerBlock:link {
+    max-width: 160px; }
+  div#footerEntries .footerBlock:link {
     background-color: #333538; }
-  div#footer .footerBlock:hover {
+  div#footerEntries .footerBlock:hover {
     background-color: #3d3f42; }
-  div#footer .footerTitleLink {
+  div#footerEntries .footerTitleLink {
     font-weight: bold; }
 
 #pagination {
@@ -332,3 +344,35 @@ div#footer {
     color: #aa0000; }
   .codehilite .il {
     color: #009999; }
+
+@media (min-width: 1001px) {
+  body {
+    width: 800px; }
+  .headerSpecificPage {
+    width: 800px; }
+  .headerIndexPage {
+    width: 800px; } }
+
+@media (max-width: 790px) {
+  body {
+    width: 95vw; }
+  .headerSpecificPage {
+    width: 95vw;
+    grid-template-columns: 1fr 4fr; }
+  .headerIndexPage {
+    width: 95vw; } }
+
+@media (max-width: 400px) {
+  .codehilite pre {
+    white-space: pre-wrap; }
+  .codehilite code {
+    font-size: 70%; }
+  #headerNav {
+    font-size: 90%; }
+  .headerIndexPage {
+    width: 95vw;
+    grid-template-rows: 3fr 1fr 1fr;
+    margin-top: 50px; }
+    .headerIndexPage #headerAvatar img {
+      max-width: 100px;
+      height: auto; } }
