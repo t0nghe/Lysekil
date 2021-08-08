@@ -57,7 +57,16 @@ def parse_entry(full_path_name, filename):
         if entry['page']==False:
             entry['year_quarter'] = gen_year_quarter(entry['date'])
             if 'summary' not in entry.keys():
-                entry['summary'] = ''.join(body.split('\n')[0:SHOW_PARAGRAPHS])
+                separate_graphs = [graf for graf in body.split('\n') if graf != '' and graf.startswith('<p>')]
+
+                # Argh... I wish I were better at RegEx.
+                graphs_to_show = separate_graphs[0:SHOW_PARAGRAPHS]
+                if len(separate_graphs) > SHOW_PARAGRAPHS:
+                    graphs_to_show[-1] = graphs_to_show[-1].replace('</p>', ' [...]</p>')
+
+                entry['summary'] = ''.join(
+                    graphs_to_show
+                )
 
     return entry
 
