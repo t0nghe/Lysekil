@@ -119,7 +119,7 @@ Changing the structure of the pages is a bit more cumbersome. You can start by r
 1. Issue: Pagination error. When the number of blog posts to be shown is divisible by `POSTS_PER_PAGE`, one more “next page” link will be created.  
 2. To Do: Handling of media files. Currently this app does not handle media files. The user needs to manually copy media files into `_target` directory.
 3. To Do: Internal linking. Since there is no one-to-one mapping between filenames of your Markdown files and URLs on the web, it might be a minor head-scratcher. I'll do it later.
-4. Issue: Somehow you can't use underscores (`_`) in slugs. I'll fix it later.
+~~4. Issue: Somehow you can't use underscores (`_`) in slugs. I'll fix it later.~~ (This is a non-issue. Turns out you can.)
 5. To Do: I might also want to add support for external commenting services.
 
 ## Footnote
