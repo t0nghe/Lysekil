@@ -39,7 +39,7 @@ article {
 
 .headerSpecificPage {
     position: fixed;
-    width: 800px;
+    width: 80vw;
     top: 0px;
     margin-top: -5px;
     padding-top: 10px;
@@ -59,8 +59,8 @@ article {
     #headerAvatar {
         grid-area: image;
         img {
-            width: 48px;
-            height: 48px;
+            max-width: 48px;
+            max-height: 48px;
             border-radius: 10px;
         }
     }
@@ -102,7 +102,7 @@ article {
 .headerIndexPage {
     // position: -webkit-sticky;
     position: fixed;
-    width: 800px;
+    width: 80vw;
     top: 0px;
     margin-top: -5px;
     padding-top: 10px;
@@ -123,8 +123,8 @@ article {
     #headerAvatar {
         grid-area: image;
         img {
-            width: 200px;
-            height: 200px;
+            max-width: 200px;
+            max-height: 200px;
             border-radius: 50%;
             margin: 10px;
         }
@@ -165,7 +165,7 @@ a {
 
 body {
     margin: 10px;
-    width: 800px;
+    width: 80vw;
     background-color: $bear-bg-color;
     color: $main-text-color;
 }
@@ -342,4 +342,38 @@ div#footer {
 .vi { color: #aa0000 } 
 .vm { color: #aa0000 } 
 .il { color: #009999 } 
+}
+
+@media (min-width: 1001px) {
+    body { width: 800px; }
+    .headerSpecificPage { width: 800px; }
+    .headerIndexPage { width: 800px; }
+}
+
+@media (max-width: 790px) {
+    body { width: 95vw; }
+    .headerSpecificPage { width: 95vw; grid-template-columns: 1fr 4fr ;}
+    .headerIndexPage { width: 95vw; }
+
+}
+
+@media (max-width: 400px) {
+
+    .codehilite {
+        code { font-size: 70%;}
+    }
+    
+
+    .headerIndexPage { 
+        width: 95vw;
+        grid-template-rows: 3fr 1fr 1fr;
+        margin-top: 50px;
+
+        #headerAvatar {
+            img {
+                max-width: 100px;
+                height: auto;
+            }
+        }
+    }
 }

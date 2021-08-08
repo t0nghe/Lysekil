@@ -32,6 +32,7 @@ def gen_header(blog_name=BLOG_NAME, blog_url=BLOG_URL, favicon=FAVICON, addtiona
     html = f"""<!DOCTYPE html><html>
     <head><title>{page_title}</title><link rel="stylesheet" href="/assets/{css_file}" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="alternate" type="application/atom+xml" href="/atom.xml" />
     <link rel="icon" type="image/png" href="/assets/{favicon}" />
     {HACKY_scrolling_script}
