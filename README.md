@@ -32,19 +32,32 @@ You need to use Python 3.9+ because FeedGen requires timezone information to ind
 2. The markdown file should be name something like this:
    1. `210101 filename.md` in which `210101` will be interpreted as the date of creation of this blog post in `yymmdd` format. This string is equivalent to January 1, 2021.
    2. `filename` part is for human reading and is not parsed by the generator.
-3. The markdown file should have a format like this, with front matter and content separated by `///`. 
+3. The markdown files are formatted as follows, with front matter and main test separated by an empty line.
 
 ```
-title=Title of the Post
-tags=tag1, tag2, tag3
-slug=post
-summary=This Is A Summary.
-///
+title: Title of the Post
+tags: tag1, tag2, tag3
+slug: post
+summary: This Is A Summary.
+
 Paragraph 1 of your blog post. Paragraph 1 of your blog post.
 
 Paragraph 2 of your blog post. Paragraph 2 of your blog post.
 
-Paragraph 3 of your blog post. Paragraph 3 of your blog post.
+...
+```
+
+Multiple lines are allowed in `summary` field with a greater than sign followed by a few indented lines.
+
+```
+title: Title of the Post
+tags: tag1, tag2, tag3
+slug: post
+summary:>
+  This is a brief summary of the nothing that I'm going to say.
+  I may have said a million words. But there's not much information.
+
+Paragraph 1 of your blog post. Paragraph 1 of your blog post.
 ```
 
 **Fields in the header**
@@ -71,10 +84,10 @@ The `slug` determines the URL of the published page. This page will be available
 Pages are not listed in the timeline, archive page, tags page or the Atom feed.
 
 ```
-title=About Me
-page=True
-slug=about
-///
+title: About Me
+page: True
+slug: about
+
 Lysekil is a beautiful seaside town in West Sweden. 
 ```
 
