@@ -51,6 +51,7 @@ def parse_entry(full_path_name, filename):
         entry['body'] = body
         created = datetime.strptime(filename.split()[0], '%y%m%d')
         entry['date'] = created.date()
+        entry['slug'] = entry['slug'].replace(" ", "_")
         entry['ext_url'] = gen_ext_url(entry['date'], entry['slug'], entry['page'])
 
         # In parse_frontmatter, I made sure there will be a 'page' key in metadata indicating if this file is a page.`
@@ -62,7 +63,7 @@ def parse_entry(full_path_name, filename):
                 # Argh... I wish I were better at RegEx.
                 graphs_to_show = separate_graphs[0:SHOW_PARAGRAPHS]
                 if len(separate_graphs) > SHOW_PARAGRAPHS:
-                    graphs_to_show[-1] = graphs_to_show[-1].replace('</p>', ' [...]</p>')
+                    graphs_to_show[-1] = graphs_to_show[-1].replace('</p>', ' ⋯</p>')
 
                 entry['summary'] = ''.join(
                     graphs_to_show
