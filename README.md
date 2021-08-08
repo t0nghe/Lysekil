@@ -47,13 +47,13 @@ Paragraph 2 of your blog post. Paragraph 2 of your blog post.
 ...
 ```
 
-Multiple lines are allowed in `summary` field with a greater than sign followed by a few indented lines.
+Multiple lines are allowed in `summary` field with a greater than sign followed by a few indented lines. (Note there's a space between colon `:` and greater than sign `>`.)
 
 ```
 title: Title of the Post
 tags: tag1, tag2, tag3
 slug: post
-summary:>
+summary: >
   This is a brief summary of the nothing that I'm going to say.
   I may have said a million words. But there's not much information.
 
