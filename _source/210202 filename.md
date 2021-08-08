@@ -1,4 +1,4 @@
-title: Sample Post With Long Summary
+title: Sample Post 2 With Long Summary
 tags: tag1, tag2
 slug: sample_post2
 summary: >

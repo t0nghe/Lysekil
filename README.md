@@ -34,31 +34,39 @@ You need to use Python 3.9+ because FeedGen requires timezone information to ind
    2. `filename` part is for human reading and is not parsed by the generator.
 3. The markdown files are formatted as follows, with front matter and main test separated by an empty line.
 
+*Sample 1*
+
 ```
-title: Title of the Post
-tags: tag1, tag2, tag3
-slug: post
-summary: This Is A Summary.
+title: Sample Post One
+tags: tag1, tag3
+slug: post_one
+summary: This is a sample post that shows how markdown is converted to HTML and how the generated site looks like.
 
-Paragraph 1 of your blog post. Paragraph 1 of your blog post.
-
-Paragraph 2 of your blog post. Paragraph 2 of your blog post.
+How are you my friend? I'd like to show you some JavaScript.
 
 ...
 ```
 
-Multiple lines are allowed in `summary` field with a greater than sign followed by a few indented lines. (Note there's a space between colon `:` and greater than sign `>`.)
+Check out `_source/210101 filename.md` and the resulting HTML file `_target/2021/q1/post_one/index.html`.
+
+*Sample 2*
+
+Multiple lines are allowed in `summary` field with a greater than sign followed by a few indented lines. (Note there's a space between colon `:` and greater than sign `>`.) Also note how footnotes are added in your markdown file.
 
 ```
-title: Title of the Post
-tags: tag1, tag2, tag3
-slug: post
+title: Sample Post 2 With Long Summary
+tags: tag1, tag2
+slug: sample_post2
 summary: >
-  This is a brief summary of the nothing that I'm going to say.
-  I may have said a million words. But there's not much information.
+  This sample post shows you how to use multiple tags.
+  And how to write longer summaries and footnotes.
 
-Paragraph 1 of your blog post. Paragraph 1 of your blog post.
+How are you my friend? I'd like to show you some JavaScript[^1].
+
+[^1]: Can you believe the invention of JavaScript has nothing to do with the written language of Java the island?
 ```
+
+Check out `_source/210202 filename.md` and the resulting HTML file `_target/2021/q1/sample_post2/index.html`.
 
 **Fields in the header**
 
@@ -69,7 +77,7 @@ Paragraph 1 of your blog post. Paragraph 1 of your blog post.
   * Namely, your domain name; year; quarter; slug.
 * `summary` is the summary of this blog post. It will be displayed on the index page, archive pages, tag listing pages, as well as the generated ATOM feed.
 
-Check out `_source/210101 filename.md` and the resulting HTML file under `_target/2021/q1/post`. 
+
 
 ### Creating a page
 
