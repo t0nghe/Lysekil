@@ -1,4 +1,5 @@
 from .settings import *
+from random import sample
 
 # In order to get a full page, you need to get:
 # 1) a header,
@@ -148,6 +149,9 @@ def gen_tags_list_container(tags_collection):
     return html
 
 def gen_footer(footer_links=FOOTER_LINKS):
+    
+    if len(footer_links) > 4:
+        footer_links = sample(footer_links, k=4)
 
     entries_html = ""
     for entry in footer_links:
@@ -157,6 +161,11 @@ def gen_footer(footer_links=FOOTER_LINKS):
         </div>
         """
 
-    html = f"""<div id="footer">{entries_html}</div></body></html>"""
+    html = f"""<div id="footer">
+    <div id="blogrollTicker">Friendly links:</div>
+    <div id="footerEntries">
+    {entries_html}</div>
+    </div></body></html>
+    """
 
     return html

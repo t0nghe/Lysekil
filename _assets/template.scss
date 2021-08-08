@@ -213,16 +213,30 @@ h3 {
 
 div#footer {
     padding: 5px;
-    display: flex;
     background-color: $footer-bg-black;
     color: $footer-text-white;
     border-radius: 5px;
+
+    #blogrollTicker {
+        padding-left: 5px;
+        padding-top: 5px;
+        font-size: 70%;
+        color: $tag_bg_color;
+        font-style: italic;
+    }
+}
+
+div#footerEntries {
+    display: flex;
+    flex-flow: row wrap;
+    // align-items: center;
+    justify-content: center;
 
     .footerBlock {
         padding: 5px;
         font-size: 80%;
         border-radius: 5px;
-        max-width: 190px;
+        max-width: 160px;
     }
 
     .footerBlock:link {
@@ -360,9 +374,16 @@ div#footer {
 @media (max-width: 400px) {
 
     .codehilite {
-        code { font-size: 70%;}
+        // overflow: scroll; 
+        pre {
+            white-space: pre-wrap;
+        }
+        code { font-size: 70% }
     }
     
+    #headerNav {
+        font-size: 90%;
+    }
 
     .headerIndexPage { 
         width: 95vw;

@@ -341,7 +341,8 @@ class BlogHome:
         fg.title(BLOG_NAME)
         fg.author( {'name':'Tonghe Wang','email':'meow'} )
         fg.link( href=BLOG_URL, rel='alternate' )
-        fg.logo('/favicon.ico')
+        fg.logo(f'{BLOG_URL}assets/{HEADERLOGO}')
+        fg.icon(f'{BLOG_URL}assets/{FAVICON}')
         fg.language('en')
         for item in self._rss:
             item = item.entry_lead()
@@ -357,6 +358,3 @@ class BlogHome:
             fe.summary(item['summary'])
 
         fg.atom_file(ext_url)
-
-
-        # {'title': '20Q1 Tagged anki, recipe', 'tags': ['anki', 'recipe'], 'date': datetime.date(2020, 10, 9), 'ext_url': '2020/q4/s02/', 'summary': "<p>I didn't set a summary in front matter. This paragraph should be shown as summary.</p>"}
