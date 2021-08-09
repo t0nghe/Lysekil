@@ -4,7 +4,6 @@ BLOG_URL = "https://url.to.your.blog/"
 FAVICON = "favicon.ico"
 CSSFILE = "template.css"
 HEADERLOGO = "logo.png"
-EXTERNAL_JS = "script.js"
 
 SOURCE_DIR = '_source'
 SOURCE_ASSETS_DIR = '_assets'
@@ -17,6 +16,10 @@ POSTS_PER_PAGE = 10
 # If a summary is not given in the header, this many paragraphs
 # from the top of an entry are shown in an index/listing and in the Atom feed.
 SHOW_PARAGRAPHS = 2
+
+# These will be shown in Atom feed
+BLOG_AUTHOR = "This And That"
+BLOG_AUTHOR_EMAIL = "this@that.com"
 
 # These are by default
 # ("Home", "/"),

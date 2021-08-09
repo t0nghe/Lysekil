@@ -20,6 +20,10 @@ $code-block-border: rgb(197, 197, 197)
     font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
+#listingHeader {
+    margin-top: 50px;
+}
+
 hr {
     width: 60%;
     border: 0px;
@@ -32,18 +36,13 @@ article {
     padding-right: 2px;
 }
 
-#scrollingInteraction {
-    top: 0px;
-    transition: 0.5s;
-}
-
 .headerSpecificPage {
-    position: fixed;
-    width: 80vw;
+    // position: fixed;
+    width: 75vw;
     top: 0px;
     margin-top: -5px;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    // padding-top: 10px;
+    margin-bottom: 30px;
     display: grid;
     grid-template-columns: 1fr 2fr ;
     grid-template-rows: 1fr 1fr;
@@ -104,12 +103,13 @@ article {
 
 .headerIndexPage {
     // position: -webkit-sticky;
-    position: fixed;
-    width: 80vw;
+    // position: fixed;
+    width: 75vw;
     top: 0px;
-    margin-top: -5px;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    // margin-top: -10px;
+    margin-bottom: 30px;
+    // padding-top: 10px;
+    // padding-bottom: 5px;
     // lines above this are added to test if scrolling will be fixed
     display: grid;
     grid-template-columns: 1fr;
@@ -169,7 +169,7 @@ a {
 
 body {
     margin: 10px;
-    width: 80vw;
+    width: 75vw;
     background-color: $bear-bg-color;
     color: $main-text-color;
 }
@@ -361,16 +361,21 @@ div#footerEntries {
 }
 
 @media (min-width: 1001px) {
-    body { width: 800px; }
-    .headerSpecificPage { width: 800px; }
-    .headerIndexPage { width: 800px; }
+    body { width: 700px; }
+    .headerSpecificPage { width: 700px; }
+    .headerIndexPage { width: 700px; }
 }
 
-@media (max-width: 790px) {
+@media (max-width: 790px) and (min-width: 601px) {
+    body { width: 85vw; }
+    .headerSpecificPage { width: 85vw; grid-template-columns: 1fr 4fr ;}
+    .headerIndexPage { width: 85vw; }
+}
+
+@media (max-width: 600px) {
     body { width: 95vw; }
     .headerSpecificPage { width: 95vw; grid-template-columns: 1fr 4fr ;}
     .headerIndexPage { width: 95vw; }
-
 }
 
 @media (max-width: 400px) {

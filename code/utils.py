@@ -36,7 +36,6 @@ def parse_entry(full_path_name, filename):
 
     with open(full_path_name) as fin:
         body = md.markdown(fin.read(), extras=["metadata", "footnotes", "fenced-code-blocks"])
-        # print(body)
         
         entry = parse_frontmatter(body.metadata)
         
@@ -343,7 +342,7 @@ class BlogHome:
         fg = FeedGenerator()
         fg.id(BLOG_URL)
         fg.title(BLOG_NAME)
-        fg.author( {'name':'Tonghe Wang','email':'meow'} )
+        fg.author( {'name': BLOG_AUTHOR,'email': BLOG_AUTHOR_EMAIL} )
         fg.link( href=BLOG_URL, rel='alternate' )
         fg.logo(f'{BLOG_URL}assets/{HEADERLOGO}')
         fg.icon(f'{BLOG_URL}assets/{FAVICON}')

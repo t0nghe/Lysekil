@@ -9,21 +9,15 @@ from random import sample
 # Unfortunately, the structure of pages are not made flexible.
 # I know some of the code is quite hacky. So I duly noted in some variable names. 
 
-def gen_header(blog_name=BLOG_NAME, blog_url=BLOG_URL, favicon=FAVICON, addtional_nav_links=ADDITIONAL_NAV_LINKS, css_file=CSSFILE, ext_js=EXTERNAL_JS, header_logo=HEADERLOGO, specific_page_title=None):
+def gen_header(blog_name=BLOG_NAME, blog_url=BLOG_URL, favicon=FAVICON, addtional_nav_links=ADDITIONAL_NAV_LINKS, css_file=CSSFILE, header_logo=HEADERLOGO, specific_page_title=None):
     """Note: If this page is 1) page for archive; 2) for a tag; 3) for a single note or page, (namely, anything but the home page) pass in `specific_page_title`.
     """
-    scrolling_interaction = ''
     if not specific_page_title:
         page_title = blog_name
         nav_style_name = "headerIndexPage"
-        scrolling_interaction = 'id="scrollingInteraction"'
-        HACKY_container_style = "<style>div#container { margin-top: 320px }</style>"
-        HACKY_scrolling_script = f"""<script type="text/javascript" src="/assets/{ext_js}"></script>"""
     else:
         page_title = f"{specific_page_title } — {blog_name}"
         nav_style_name = "headerSpecificPage"
-        HACKY_container_style = "<style>div#container { margin-top: 90px }</style>"
-        HACKY_scrolling_script = ""
 
     header_nav_links = """<a href="/">Home</a> • <a href="/archive/">Archive</a> • <a href="/tags/">Tags</a>"""
 
@@ -36,10 +30,8 @@ def gen_header(blog_name=BLOG_NAME, blog_url=BLOG_URL, favicon=FAVICON, addtiona
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="alternate" type="application/atom+xml" href="/atom.xml" />
     <link rel="icon" type="image/png" href="/assets/{favicon}" />
-    {HACKY_scrolling_script}
-    {HACKY_container_style}
     </head>
-    <body><div {scrolling_interaction} class="{nav_style_name}"><div id="headerAvatar"><a href="{blog_url}"><img src="/assets/{header_logo}" alt="Header logo." /></a></div><div id="headerBlogName"><a href="{blog_url}">{blog_name}</a></div><div id="headerNav">{header_nav_links}</div></div>"""
+    <body><div class="{nav_style_name}"><div id="headerAvatar"><a href="{blog_url}"><img src="/assets/{header_logo}" alt="Header logo." /></a></div><div id="headerBlogName"><a href="{blog_url}">{blog_name}</a></div><div id="headerNav">{header_nav_links}</div></div>"""
     return html
 
 def gen_specific_page_container(body: str, date, tags: list, title: str):
