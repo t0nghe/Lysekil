@@ -142,6 +142,8 @@ Changing the structure of the pages is a bit more cumbersome. You can start by r
 3. To Do: Internal linking. Since there is no one-to-one mapping between filenames of your Markdown files and URLs on the web, it might be a minor head-scratcher. I'll do it later.
 ~~4. Issue: Somehow you can't use underscores (`_`) in slugs. I'll fix it later.~~ (This is a non-issue. Turns out you can.)
 5. To Do: I might also want to add support for external commenting services.
+6. To Do: Pinned posts.
+7. To Do: Since we now handle friendly links in a list of dictionaries. When there are more links than can be displayed, displayed items are chosen randomly. We might need to add a weighted or pinned option. 
 
 ## Footnote
 
